@@ -5,7 +5,7 @@ let glitterY = [];
 let starAlpha = [];
 
 function setup() {
-  createCanvas(600, 700);
+  createCanvas(650, 800);
   frameRate(50);
   for (let i = 0; i < 50; i++) {
     const x = Math.floor(Math.random() * width);
@@ -192,6 +192,7 @@ function startscreen() {
   pop();
 }
 
+
 //FUNCTION FOR RESETTING THE GAME
 function resetGame() {
   grapeY = 0;
@@ -202,7 +203,7 @@ function resetGame() {
 function mousePressed() {
   if (!gameIsRunning || gameEnded) {
     resetGame();
-    gameStart = true;
+    gameIsRunning = true;
   }
 }
 
@@ -233,7 +234,6 @@ function draw() {
           fill("lightgreen");
           text("YOU WON!", 176, 160);
           textSize(10);
-          // Orange emoji for game over
           fill("orange");
           stroke(255, 125, 0);
           strokeWeight(2);
